@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="InventarProgramm.UI.RegalHelper.Header"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InventarProgramm.UI.RegalHelper"
+             mc:Ignorable="d"  Background="#140028B0"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width="4"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Fill="#7c7c7c" Margin="4, 0, 4, 0" HorizontalAlignment="Center" Width="1" Grid.Column="2"/>
+        <Rectangle Fill="#7c7c7c" Margin="4, 0, 4, 0" HorizontalAlignment="Center" Width="1" Grid.Column="4"/>
+        <Rectangle Fill="#7c7c7c" Margin="4, 0, 4, 0" HorizontalAlignment="Center" Width="1" Grid.Column="6"/>
+        <Rectangle Fill="#7c7c7c" Margin="4, 0, 4, 0" HorizontalAlignment="Center" Width="1" Grid.Column="8"/>
+
+        <TextBlock FontSize="12" Margin="0, 2, 0, 2" HorizontalAlignment="Left" Grid.Column="1" Text="ID"/>
+        <TextBlock FontSize="12" Margin="0, 2, 0, 2" HorizontalAlignment="Left" Grid.Column="3" Text="Name"/>
+        <TextBlock FontSize="12" Margin="0, 2, 0, 2" HorizontalAlignment="Left" Grid.Column="5" Text="Lagername"/>
+        <TextBlock FontSize="12" Margin="0, 2, 0, 2" HorizontalAlignment="Left" Grid.Column="7" Text="Bearbeiten"/>
+        <TextBlock FontSize="12" Margin="0, 2, 0, 2" HorizontalAlignment="Left" Grid.Column="9" Text="Löschen"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="InventarProgramm.UI.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventarProgramm.UI"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Login" Height="200" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Anmeldung" Grid.Row="1" FontSize="28" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Right" Text="Nutzername" Grid.Row="0" Grid.Column="0"/>
+            <TextBlock HorizontalAlignment="Right" Text="Passwort" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Name="tbUsername" Grid.Row="0" Width="120" Grid.Column="2"/>
+            <PasswordBox Name="tbPassword" Grid.Row="2" Width="120" Grid.Column="2" KeyDown="tbPassword_KeyDown"/>
+        </Grid>
+        <TextBlock Text="Login" Grid.Row="5" Style="{StaticResource Clickable}" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Name="btnLogin" MouseLeftButtonUp="btnLogin_MouseLeftButtonUp"/>
+    </Grid>
+</Window>

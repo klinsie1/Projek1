@@ -1,0 +1,31 @@
+﻿<Window x:Class="InventarProgramm.UI.RegalHelper.Detailed"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventarProgramm.UI.RegalHelper"
+        mc:Ignorable="d" Background="Transparent" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize"
+        Height="100" Width="360" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Rectangle Style="{StaticResource DetailedWindowBackground}"/>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Regalname:" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+            <TextBox Name="tbRegalname" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+            <TextBlock Text="Lager:" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+            <ComboBox Name="cbLager" VerticalAlignment="Center" Grid.Column="1"  Grid.Row="1"/>
+
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Abbrechen" Style="{StaticResource Clickable}" Name="btnCancel" MouseLeftButtonUp="btnCancel_MouseLeftButtonUp" Grid.Column="0" Grid.Row="2"/>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Übernehmen" Style="{StaticResource Clickable}" Name="btnSave" MouseLeftButtonUp="btnSave_MouseLeftButtonUp" Grid.Column="1" Grid.Row="2"/>
+        </Grid>
+    </Grid>
+</Window>

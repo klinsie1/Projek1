@@ -1,0 +1,45 @@
+﻿<Window x:Class="InventarProgramm.UI.Regalliste"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:helper="clr-namespace:InventarProgramm.UI.RegalHelper"
+        xmlns:local="clr-namespace:InventarProgramm.UI"
+        mc:Ignorable="d" Title="Regalliste bearbeiten"
+        Height="375" Width="700">
+    <Grid Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="btnAddRegal" Text="Regal hinzufügen" Style="{StaticResource Clickable}" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" MouseLeftButtonUp="btnAddRegal_MouseLeftButtonUp"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <helper:Header x:Name="ucHeader" Grid.Row="0" Margin="0, 0, 17, 0"/>
+            <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Visible">
+                <ItemsControl Name="icContainer">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <helper:Row/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
