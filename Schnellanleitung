@@ -1,0 +1,7 @@
+1. Projekt als Zip-Datei von GitHub herunterladen (https://github.com/klinsie1/Projek1)
+2. Zip-Datei entpacken
+3. "InventarProgramm.sln" in Visual Studio öffnen (Projek1-main\InventarProgramm\InventarProgramm.sln)
+4 NuGet-Konsole öffnen und den Befehl aus der Readme.md-Datei einfügen und ausführen (Update-Package -reinstall)
+5. Rechtsklick auf das Projekt rechts im Projektmappen-Explorer und anschließend auf "Projektmappe erstellen" klicken
+6. Dann die Datenbank-Data "data" von Projek1-main\InventarProgramm\InventarProgramm\data kopieren und in Projek1-main\InventarProgramm\InventarProgramm\bin\Debug einfügen
+7. Nun kann die Anwendung über Projek1-main\InventarProgramm\InventarProgramm\bin\Debug\InventarProgramm.exe gestarttet werden
